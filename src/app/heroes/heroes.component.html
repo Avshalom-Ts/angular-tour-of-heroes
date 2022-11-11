@@ -7,6 +7,7 @@
 </div> -->
 
 <h2>My Heroes</h2>
+<!-- <button (click)="getHeroes()">Get Heroes</button> or to call it in the method ngOnInit -->
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
