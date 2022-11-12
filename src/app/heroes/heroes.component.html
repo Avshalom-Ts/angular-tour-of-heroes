@@ -10,10 +10,12 @@
 <!-- <button (click)="getHeroes()">Get Heroes</button> or to call it in the method ngOnInit -->
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
-    <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
+    <!-- <button type="button" (click)="onSelect(hero)" [class.selected]="hero===selectedHero"> -->
+    <a routerLink="/detail/{{hero.id}}">
       <span class="badge"> {{hero.id}} </span>
       <span class="name"> {{hero.name}} </span>
-    </button>
+      <!-- </button> -->
+    </a>
   </li>
 </ul>
 <!-- Moved to hero detail component -->
@@ -25,4 +27,4 @@
     <input id="hero-name" placeholder="name" [(ngModel)]="selectedHero.name">
   </div>
 </div> -->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
